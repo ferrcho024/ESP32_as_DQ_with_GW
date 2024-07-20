@@ -8,7 +8,7 @@
 #include "esp_wifi.h"
 
 #define LED_BUILTIN 3
-const int ledPin = LED_BUILTIN;
+const int ledPin = LED_BUILTIN; 
 
 // Local includes 
 #include "parameters.h"
@@ -86,20 +86,6 @@ void value_to_list(float *list, String value, int pos ){
         list[pos] = value.toFloat();
     }
 }
-
-/*
-void value_to_list(float *list, const char* value, int pos ){
-    if (strcmp(value, "nan") == 0)  {
-        list[pos] = NAN;  // Representación de NaN en C
-    } else {
-        list[pos] = atof(value);
-    }
-}
-*/
-
-// Declaración de una cola
-//QueueHandle_t queue_df;
-//QueueHandle_t queue_nova;
 
 void task1(void *parameter) {
   int cont = 0; // Variable de conteo de datos recibidos.
